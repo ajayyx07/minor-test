@@ -3,8 +3,6 @@ import json
 from datetime import datetime
 from pydantic import BaseModel
 
-
-
 app = FastAPI()
 
 class student(BaseModel):
@@ -40,7 +38,6 @@ def add_student(student_id:str,student:student):
     write_data(data)
     return {"message" : "student added"}
 
-    
 
 @app.delete("/del")
 def delete_st(student_id:str):
