@@ -7,6 +7,10 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+class student(BaseModel):
+    name : str
+    course : str
+    marks : float
 
 def read_data():
     with open("students.json","r") as file:
@@ -27,6 +31,16 @@ def greet():
 def student_get(student_id:str):
     data = read_data()
     return data[student_id]
+
+@app.post("/add_student")
+def add_student(student_id:str,student:student):
+    data = read_data()
+    pydantic_obj = student.model_dump()
+    data[student_id] = pydantic_obj
+    write_data(data)
+    return {"message" : "student added"}
+
+    
 
 @app.delete("/del")
 def delete_st(student_id:str):

@@ -10,5 +10,10 @@
         "name": "ayush",
         "marks": 89,
         "course": "Python"
+    },
+    "P003": {
+        "name": "aniket",
+        "course": "fhoe",
+        "marks": 0.0
     }
 }
