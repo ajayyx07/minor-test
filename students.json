@@ -1,0 +1,14 @@
+{
+ "P001":{
+    "id":1,
+    "name":"Ajay",
+    "marks":93,
+    "course":"Fastapi"
+ },
+ "P002":{
+    "id":2,
+    "name":"ayush",
+    "marks":89,
+    "course":"Fastapi"
+ }
+}
