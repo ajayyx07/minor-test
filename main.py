@@ -30,6 +30,11 @@ def student_get(student_id:str):
     data = read_data()
     return data[student_id]
 
+@app.get("/all_student")
+def student_get():
+    data = read_data()
+    return data
+
 @app.post("/add_student")
 def add_student(student_id:str,student:student):
     data = read_data()
